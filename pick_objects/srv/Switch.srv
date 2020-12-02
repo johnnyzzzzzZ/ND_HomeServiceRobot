@@ -1,0 +1,6 @@
+bool switch_odom
+bool switch_tf
+bool switch_laser
+bool switch_map
+---
+string msg_feedback
