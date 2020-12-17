@@ -56,27 +56,27 @@ public:
 			}
 			ROS_WARN_ONCE("Please create a subscriber to the marker");
 		}
-		// move to pick up point
+		// move to picking up point
 		if (req.type == 0 && req.reach == 0){
 			marker_pub.publish(marker);	
-          	ROS_INFO("case1");
+          	ROS_INFO("On the way to pick up point");
 		}
-		// reach pick up point
+		// reach picking up point
 		else if (req.type == 0 && req.reach == 1){
 			marker.action = visualization_msgs::Marker::DELETE;
 			marker_pub.publish(marker);
-          	ROS_INFO("case2");
+          	ROS_INFO("Picking up");
 		}
-		// move to drop off point
+		// move to dropping off point
 		else if (req.type == 1 && req.reach == 0){
 			marker.action = visualization_msgs::Marker::DELETE;
 			marker_pub.publish(marker);
-          	ROS_INFO("case3");
+          	ROS_INFO("On the way to drop off point");
 		}
-		// reach drop off point
+		// reach dropping off point
 		else if (req.type == 1 && req.reach == 1){
 			marker_pub.publish(marker);
-          	ROS_INFO("case4");
+          	ROS_INFO("Dropping off");
 		}
 		return true;
 	}

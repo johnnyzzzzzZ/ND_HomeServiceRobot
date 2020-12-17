@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   actionlib
   move_base_msgs
+  add_markers
 )
 
 

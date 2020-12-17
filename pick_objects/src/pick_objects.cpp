@@ -27,8 +27,8 @@ int main(int argc, char** argv){
   move_base_msgs::MoveBaseGoal goal;
 
   std::vector< std::vector<float> > point = {
-    { -6.0, -1.0},
-    { 0.0, 0.0}
+    { -6.3, 0.05},
+    { 6.85, 1.94}
   };
 
   for(int i=0;i<2;i++){
@@ -69,9 +69,9 @@ int main(int argc, char** argv){
     	goal_reach = 1;
       	goal_data.request.reach = goal_reach;
     	callMarker.call(goal_data);
-    	ROS_INFO("Hooray, the base moved 1 meter forward, %f",goal.target_pose.pose.position.x);
+    	ROS_INFO("Hooray, the robot reaches the goal, %f",goal.target_pose.pose.position.x);
     }
-    else ROS_INFO("The base failed to move forward 1 meter for some reason");
+    else ROS_INFO("Fail to move to the goal!! Check if there are obstacls on the way.");
 
     //
     ros::Duration(10).sleep();
