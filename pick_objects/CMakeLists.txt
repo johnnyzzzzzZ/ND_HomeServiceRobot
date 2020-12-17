@@ -27,8 +27,8 @@ generate_messages(
 ## catkin specific configuration ##
 ###################################
 catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES pick_objects
+#  INCLUDE_DIRS include
+#  LIBRARIES pick_objects
   CATKIN_DEPENDS message_runtime std_msgs roscpp roslib actionlib move_base_msgs
 )
 
@@ -36,7 +36,7 @@ catkin_package(
 ## Build ##
 ###########
 include_directories(
-  include
+#  include
   ${catkin_INCLUDE_DIRS}
 )
 
