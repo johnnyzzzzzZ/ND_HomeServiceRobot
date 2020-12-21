@@ -21,7 +21,7 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 5. Run the script file in the scripts directory
 ```
-./<script file>
+./$(rospack find add_markers)/../scripts/<script file>
 ```
 
 ## Localiztion
