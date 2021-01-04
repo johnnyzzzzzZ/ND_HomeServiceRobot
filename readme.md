@@ -23,7 +23,7 @@ cd $(rospack find add_markers)/../scripts && ./<script file>
 ```
 
 Use *test_slam.sh* to start SLAM algorithm and generate the map.
-Use *home_service.sh* to simulate a robot to an deliver.
+Use *home_service.sh* to navigate the robot from point to point.
 
 ## Localiztion
 We select the offical ROS package **amcl** (http://wiki.ros.org/amcl#Parameters) for the purpose of localizing our robot. It would be implemented in the **amcl_demo.launch** file. In brief, this algorithm will generate many particles, propagate their motion, and find particles which matches the laser scan data to represent the robot. 
